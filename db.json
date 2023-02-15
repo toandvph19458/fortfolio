@@ -1,4 +1,32 @@
 {
-    
-    
+  "project": [
+    {
+      "id": "1",
+      "nameProject": "Du an mau",
+      "imgProject": "https://picsum.photos/200/300.jpg",
+      "categoryProjectId": "1"
+    },
+    {
+      "id": "2",
+      "nameProject": "Du an mau",
+      "imgProject": "https://picsum.photos/200/300.jpg",
+      "categoryProjectId": "1"
+    },
+    {
+      "id": "3",
+      "nameProject": "Du an mau",
+      "imgProject": "https://picsum.photos/200/300.jpg",
+      "categoryProjectId": "1"
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "categoryName": "categoryA"
+    },
+    {
+      "id": "2",
+      "categoryName": "categoryB"
+    }
+  ]
 }
