@@ -1,12 +1,8 @@
-import axios from "axios";
-import { getAdmin } from "../../api/admin";
-import { getAllcategorys } from "../../api/category";
-import { addProjectt } from "../../api/project";
+import React from "react";
 import menu from "../../components/layoutadmin/menu";
 import sildebar from "../../components/layoutadmin/sildebar";
 import { useState, useEffect, router } from "../../lib";
-
-const addProject = () => {
+const blogedit = ({ id }) => {
   const [cate, setcate] = useState([]);
   const [user, setuser] = useState({});
   useEffect(() => {
@@ -69,39 +65,31 @@ const addProject = () => {
     <form class='w-[500px]' id='add-form' action=''>
         
        <div class='mt-5 ml-5'>
-       <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tên Dự Án</label>
+       <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tiêu đề</label>
        <div class="flex">
          <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-           Tên
+           Tiêu đề
          </span>
-         <input type="text" id="nameproject" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+         <input type="text" id="title" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
        </div>
        </div>
 
        <div class='mt-5 ml-5'>
-       <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Công Nghệ</label>
+       <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nội Dung</label>
        <div class="flex">
          <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-           Công NGhệ
+           Nội Dung
          </span>
-         <input type="text" id="tech" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+         <input type="text" id="content" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
        </div>
        </div>
 
-       <div class='mt-5 ml-5'>
-       <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Công Nghệ</label>
-       <div class="flex">
-         <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-           Link GITHUB
-         </span>
-         <input type="text" id="link-git" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-       </div>
-       </div>
+      
 
        
     <div class='mt-5 ml-5'>
       <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar">Thêm ảnh</label>
-      <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="projectImg" type="file" multiple>
+      <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="projectImg" type="file">
     </div>
     
 
@@ -125,7 +113,7 @@ const addProject = () => {
     ${cate
       .map((item) => {
         return `
-      <option value='${item.id}' id='cate-id'>${item.categoryName}</option>
+      <option value='${item.id}' id='cate-id'>${item.categoryblogName}</option>
       `;
       })
       .join("")}
@@ -145,4 +133,4 @@ const addProject = () => {
   `;
 };
 
-export default addProject;
+export default blogedit;

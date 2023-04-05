@@ -1,14 +1,15 @@
+import { getAdmin } from "../../api/admin";
+import { deletecategoryBlog, getAllcategoryBlogs } from "../../api/blogCate";
 import menu from "../../components/layoutadmin/menu";
 import sildebar from "../../components/layoutadmin/sildebar";
-import table from "../../components/layoutadmin/table";
-import { deleteProject, getAllProjects } from "../../api/project";
+import tablecateblog from "../../components/layoutadmin/tablecateblog";
+
 import { useEffect, useState } from "../../lib";
-import { getAdmin } from "../../api/admin";
-const projects = () => {
-  const [data, getdata] = useState([]);
+const blogcate = () => {
+  const [cate, getcate] = useState([]);
   const [user, setuser] = useState({});
   useEffect(() => {
-    getAllProjects().then((data) => getdata(data));
+    getAllcategoryBlogs().then((cate) => getcate(cate));
     getAdmin().then((user) => setuser(user));
   }, []);
   useEffect(() => {
@@ -17,9 +18,9 @@ const projects = () => {
     for (let btn of btns) {
       const id = btn.dataset.id;
       btn.addEventListener("click", () => {
-        deleteProject(id).then(() => {
-          const newData = data.filter((project) => project.id != id);
-          getdata(newData);
+        deletecategoryBlog(id).then(() => {
+          const newData = cate.filter((category) => category.id != id);
+          getcate(newData);
         });
       });
     }
@@ -30,13 +31,11 @@ const projects = () => {
     </header>
     <main class='md:flex block flex-wrap w-full h-screen container mx-auto '>
     <div class='md:w-3/12 max-w-full'>${sildebar({ user })}</div>
- 
-    <div class='w-8/12 shadow-xl mr-4'>
-    <div> <a href="/#/admin/addproject">Thêm Mới Dự án</a></div>
-      ${table(data)}
+    <div class='w-8/12 shadow-xl'>
+    <div> <a href="/#/admin/addblogcate">Thêm Mới Danh Mục</a></div>
+      ${tablecateblog(cate)}
     </div>
-    </main>
-  `;
+    </main>`;
 };
 
-export default projects;
+export default blogcate;

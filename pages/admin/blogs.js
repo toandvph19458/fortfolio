@@ -1,14 +1,15 @@
 import menu from "../../components/layoutadmin/menu";
 import sildebar from "../../components/layoutadmin/sildebar";
 import table from "../../components/layoutadmin/table";
-import { deleteProject, getAllProjects } from "../../api/project";
 import { useEffect, useState } from "../../lib";
 import { getAdmin } from "../../api/admin";
-const projects = () => {
+import { deleteBlog, getAllBlogs } from "../../api/post";
+import tableblog from "../../components/layoutadmin/tableblog";
+const blogs = () => {
   const [data, getdata] = useState([]);
   const [user, setuser] = useState({});
   useEffect(() => {
-    getAllProjects().then((data) => getdata(data));
+    getAllBlogs().then((data) => getdata(data));
     getAdmin().then((user) => setuser(user));
   }, []);
   useEffect(() => {
@@ -17,8 +18,8 @@ const projects = () => {
     for (let btn of btns) {
       const id = btn.dataset.id;
       btn.addEventListener("click", () => {
-        deleteProject(id).then(() => {
-          const newData = data.filter((project) => project.id != id);
+        deleteBlog(id).then(() => {
+          const newData = data.filter((blogs) => blogs.id != id);
           getdata(newData);
         });
       });
@@ -33,10 +34,10 @@ const projects = () => {
  
     <div class='w-8/12 shadow-xl mr-4'>
     <div> <a href="/#/admin/addproject">Thêm Mới Dự án</a></div>
-      ${table(data)}
+      ${tableblog(data)}
     </div>
     </main>
   `;
 };
 
-export default projects;
+export default blogs;

@@ -1,32 +1,116 @@
 {
   "project": [
     {
-      "id": "1",
-      "nameProject": "Du an mau",
-      "imgProject": "https://picsum.photos/200/300.jpg",
-      "categoryProjectId": "1"
-    },
-    {
       "id": "2",
       "nameProject": "Du an mau",
-      "imgProject": "https://picsum.photos/200/300.jpg",
-      "categoryProjectId": "1"
+      "imgProject": "https://img.meta.com.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg",
+      "imgProjects": [
+        "https://res.cloudinary.com/ddn4r33s3/image/upload/v1677029129/portpolio/j72ofzcnhzxxe6amhv91.png"
+      ],
+      "technology": "PHP HTML CSS Javascript",
+      "categoryId": "1",
+      "link": ""
     },
     {
       "id": "3",
       "nameProject": "Du an mau",
-      "imgProject": "https://picsum.photos/200/300.jpg",
-      "categoryProjectId": "1"
+      "imgProject": "https://img.meta.com.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg",
+      "imgProjects": [
+        "https://res.cloudinary.com/ddn4r33s3/image/upload/v1677029129/portpolio/j72ofzcnhzxxe6amhv91.png"
+      ],
+      "technology": "PHP HTML CSS Javascript",
+      "categoryId": "1",
+      "link": ""
+    },
+    {
+      "id": "4",
+      "nameProject": "Du an mau",
+      "imgProject": "https://img.meta.com.vn/Data/image/2022/01/13/anh-dep-thien-nhien-3.jpg",
+      "imgProjects": [
+        "https://res.cloudinary.com/ddn4r33s3/image/upload/v1677029129/portpolio/j72ofzcnhzxxe6amhv91.png"
+      ],
+      "technology": "PHP HTML CSS Javascript",
+      "categoryId": "2",
+      "link": ""
     }
   ],
   "category": [
     {
+      "id": "0",
+      "categoryName": "ALL"
+    },
+    {
       "id": "1",
-      "categoryName": "categoryA"
+      "categoryName": "WEB"
     },
     {
       "id": "2",
-      "categoryName": "categoryB"
+      "categoryName": "APP"
     }
+  ],
+  "admin": {
+    "avatar": "https://res.cloudinary.com/ddn4r33s3/image/upload/v1676903663/portpolio/vkjcv5drpkwvx2wr0mdn.png",
+    "email": "admin@gmail.com",
+    "name": "Toan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ",
+    "typing": " Iam a web designer!",
+    "aboutme": "  I am talanted florist and decorator. I have graduated from International and cultural university of design and arts. Since first year in high school I relized that nature is most powerfull and beautiful gift in the world. I was captivated by beauty and simplicity of flowers and trees. Since then I have started to create and mastering unique and nice bouquets. My 1st masterpiece was garden of ant Ula Lowe decorated by me",
+    "password": "123",
+    "facebook": "https://www.facebook.com/profile.php?id=100045956387796",
+    "gitHub": "6"
+  },
+  "blog": [
+    {
+      "id": "1",
+      "title": "Github là gì?",
+      "imgPost": "https://chiasekinang.com/wp-content/uploads/2021/01/git-la-gi.jpg",
+      "content": "GitHub là một dịch vụ nổi tiếng lưu trữ mã nguồn trên web cho các dự án phát triển phần mềm. GitHub cung cấp cho người dùng cả phiên bản trả tiền lẫn miễn phí cho các tài khoản. Tính đến tháng 4 năm 2016, GitHub có hơn 14 triệu người sử dụng với hơn 35 triệu kho mã nguồn. Làm cho nó trở thành máy chủ chứa mã nguồn lớn trên thế giới. Nó được tạo bởi Linus Torvalds vào năm 2005. GitHub được viết bằng Ruby on Rails và Erlang.",
+      "timePost": "",
+      "author": "TOAN DV",
+      "categoryBlogId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Github là gì?",
+      "imgPost": "https://chiasekinang.com/wp-content/uploads/2021/01/git-la-gi.jpg",
+      "content": "GitHub là một dịch vụ nổi tiếng lưu trữ mã nguồn trên web cho các dự án phát triển phần mềm. GitHub cung cấp cho người dùng cả phiên bản trả tiền lẫn miễn phí cho các tài khoản. Tính đến tháng 4 năm 2016, GitHub có hơn 14 triệu người sử dụng với hơn 35 triệu kho mã nguồn. Làm cho nó trở thành máy chủ chứa mã nguồn lớn trên thế giới. Nó được tạo bởi Linus Torvalds vào năm 2005. GitHub được viết bằng Ruby on Rails và Erlang.",
+      "timePost": "",
+      "author": "TOAN DV",
+      "categoryBlogId": "1"
+    },
+    {
+      "id": "3",
+      "title": "Github là gì?",
+      "imgPost": "https://chiasekinang.com/wp-content/uploads/2021/01/git-la-gi.jpg",
+      "content": "GitHub là một dịch vụ nổi tiếng lưu trữ mã nguồn trên web cho các dự án phát triển phần mềm. GitHub cung cấp cho người dùng cả phiên bản trả tiền lẫn miễn phí cho các tài khoản. Tính đến tháng 4 năm 2016, GitHub có hơn 14 triệu người sử dụng với hơn 35 triệu kho mã nguồn. Làm cho nó trở thành máy chủ chứa mã nguồn lớn trên thế giới. Nó được tạo bởi Linus Torvalds vào năm 2005. GitHub được viết bằng Ruby on Rails và Erlang.",
+      "timePost": "",
+      "author": "TOAN DV",
+      "categoryBlogId": "1"
+    },
+    {
+      "id": "4",
+      "title": "Github là gì?",
+      "imgPost": "https://chiasekinang.com/wp-content/uploads/2021/01/git-la-gi.jpg",
+      "content": "GitHub là một dịch vụ nổi tiếng lưu trữ mã nguồn trên web cho các dự án phát triển phần mềm. GitHub cung cấp cho người dùng cả phiên bản trả tiền lẫn miễn phí cho các tài khoản. Tính đến tháng 4 năm 2016, GitHub có hơn 14 triệu người sử dụng với hơn 35 triệu kho mã nguồn. Làm cho nó trở thành máy chủ chứa mã nguồn lớn trên thế giới. Nó được tạo bởi Linus Torvalds vào năm 2005. GitHub được viết bằng Ruby on Rails và Erlang.",
+      "timePost": "",
+      "author": "TOAN DV",
+      "categoryBlogId": "1"
+    }
+  ],
+  "categoryBlog": [
+    {
+      "id": "0",
+      "categoryblogName": "ALL"
+    },
+    {
+      "id": "1",
+      "categoryblogName": "Blog"
+    },
+    {
+      "id": "2",
+      "categoryblogName": "work"
+    }
+  ],
+  "contact": [
+    {}
   ]
 }

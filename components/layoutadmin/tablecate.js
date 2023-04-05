@@ -29,7 +29,7 @@ const tablecate = (project) => {
                </td>
                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                 <button  class='btn-remove border p-2 bg-red-500 rounded-lg' data-id='${data.id}'>DELETE</button>
-                <a class ='border py-2 px-4 bg-green-400 rounded-lg' href="/admin/projects/${data.id}/edit">Sửa</a>
+                <a class ='border py-2 px-4 bg-green-400 rounded-lg' href="/#/admin/cateedit/${data.id}">Sửa</a>
                </td
            </tbody>
              `;

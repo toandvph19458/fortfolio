@@ -18,6 +18,9 @@ const table = (project) => {
                image
               </th>
               <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+              Link GITHUB
+             </th>
+              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                 Action
               </th>
             </tr>
@@ -32,11 +35,14 @@ const table = (project) => {
                ${data.nameProject}
                </td>
                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-              <img class='w-[50px]' src=' ${data.imgProject}'>
+              <img class='w-[50px]' src=' ${data.imgProjects[0]}'>
+               </td>
+               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+               ${data.link}
                </td>
                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                 <button  class='btn-remove border p-2 bg-red-500 rounded-lg' data-id='${data.id}'>DELETE</button>
-                <a class ='border py-2 px-4 bg-green-400 rounded-lg' href="/admin/projects/${data.id}/edit">Sửa</a>
+                <a class ='border py-2 px-4 bg-green-400 rounded-lg' href="/#/admin/editproject/${data.id}">Sửa</a>
                </td
            </tbody>
              `;
